@@ -1,7 +1,7 @@
 <template>
   <div :class="{ dark: false }" class="bg-gray-900 min-h-screen text-white">
     <nav
-      class="sm:px-4 py-2.5 bg-gray-800 text-white fixed h-12 w-full shadow shadow-gray-800"
+      class="sm:px-4 py-2.5 bg-gray-800 text-white fixed h-12 w-full shadow shadow-gray-800 z-[1000]"
     >
       <div
         class="container min-w-full px-4 mx-auto flex flex-wrap items-center justify-between"

@@ -1,12 +1,13 @@
 <template>
-  <div>
-    <div v-if="$fetchState.pending">Loading ...</div>
-    <div
-      v-else
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2.5 p-4 lg:px-0"
-    >
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-4"
+  >
+    <template v-if="$fetchState.pending">
+      <CardSkeleton v-for="index in 25" :key="index" />
+    </template>
+    <template v-else>
       <CardGame v-for="game in games" :key="game.id" :game="game" />
-    </div>
+    </template>
   </div>
 </template>
 
@@ -31,9 +32,7 @@ export default {
       if (res.status === 200) {
         this.games = res.data
       }
-    } catch (e) {
-      console.log(e)
-    }
+    } catch (e) {}
   },
 }
 </script>

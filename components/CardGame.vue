@@ -1,5 +1,5 @@
 <template>
-  <div class="font-sans p-4 w-full rounded-lg text-white shadow shadow-purple-600 lg:shadow-none">
+  <div class="font-sans p-4 w-full rounded-lg text-white shadow shadow-purple-600">
     <div class="font-sans">
       <a href="#">
         <img
