@@ -1,3 +1,5 @@
+const PROXY_PATH = `/api1/`
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -35,10 +37,20 @@ export default {
     '@nuxtjs/pwa',
   ],
 
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  publicRuntimeConfig: {
+    PROXY_PATH,
+  },
+
   axios: {
-    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+    proxy: true,
+  },
+
+  proxy: {
+    [`${PROXY_PATH}`]: {
+      target: 'https://www.mmobomb.com/api1/',
+      pathRewrite: { [`^${PROXY_PATH}`]: '' },
+      changeOrigin: true,
+    },
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
