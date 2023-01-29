@@ -1,6 +1,8 @@
 <template>
   <div :class="{ dark: false }" class="bg-gray-900 min-h-screen text-white">
-    <nav class="px-2 sm:px-4 py-2.5 bg-gray-800 text-white fixed h-12 w-full shadow shadow-gray-800">
+    <nav
+      class="sm:px-4 py-2.5 bg-gray-800 text-white fixed h-12 w-full shadow shadow-gray-800"
+    >
       <div
         class="container min-w-full px-4 mx-auto flex flex-wrap items-center justify-between"
       >
@@ -14,7 +16,7 @@
 
     <div class="h-12"></div>
 
-    <div class="container min-w-full px-4 mx-auto">
+    <div class="container min-w-full sm:px-4 mx-auto">
       <Nuxt />
     </div>
   </div>

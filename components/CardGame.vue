@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4 w-full rounded-lg text-white">
+  <div class="font-sans p-4 w-full rounded-lg text-white shadow shadow-purple-600 lg:shadow-none">
     <div class="font-sans">
       <a href="#">
         <img
@@ -26,7 +26,7 @@
         <div
           class="text-sm text-gray-400 tracking-tight flex justify-between mb-3"
         >
-          <span class="w-2/3">{{ game.publisher }}</span>
+          <span class="w-1/2 md:w-2/3">{{ game.publisher }}</span>
           <span>{{ releaseDate }}</span>
         </div>
 
