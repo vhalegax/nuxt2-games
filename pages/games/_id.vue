@@ -1,10 +1,13 @@
 <template>
   <div>
     <template v-if="$fetchState.pending">
-      <div role="status" class="shadow animate-pulse grid lg:grid-cols-2 gap-4">
+      <div
+        role="status"
+        class="shadow animate-pulse grid lg:grid-cols-2 gap-4 pb-4"
+      >
         <div class="mb-4 lg:mb-0">
           <svg
-            class="w-full max-h-96 object-fill text-gray-200 dark:text-gray-600"
+            class="w-full max-h-96 object-fill text-base-300 dark:text-base-700"
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
             fill="currentColor"
@@ -18,12 +21,12 @@
 
         <div>
           <div
-            class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"
+            class="h-2.5 bg-base-300 rounded-full dark:bg-base-700 w-48 mb-4"
           ></div>
           <div
             v-for="i in 12"
             :key="i"
-            class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"
+            class="h-2 bg-base-300 rounded-full dark:bg-base-700 mb-2.5"
           ></div>
         </div>
       </div>
@@ -58,14 +61,16 @@
         </div>
 
         <div>
-          <h1 class="text-5xl font-medium tracking-tight text-white">
+          <h1 class="text-5xl font-medium tracking-tight">
             {{ game.title }}
           </h1>
 
+          <!-- eslint-disable -->
           <p
-            class="mt-8 text-gray-300 tracking-tight"
+            class="mt-8 text-base-700 dark:text-base-300 tracking-tight"
             v-html="game.description"
           ></p>
+          <!-- eslint-enable -->
 
           <hr class="my-4" />
 
@@ -75,32 +80,32 @@
 
           <div class="grid grid-cols-3 mt-4 gap-4">
             <div class="mb-2">
-              <h4 class="text-gray-400">Title</h4>
+              <h4 class="text-base-500 dark:text-base-400">Title</h4>
               {{ game.title }}
             </div>
 
             <div>
-              <h4 class="text-gray-400">Developer</h4>
+              <h4 class="text-base-500 dark:text-base-400">Developer</h4>
               {{ game.developer }}
             </div>
 
             <div>
-              <h4 class="text-gray-400">Publisher</h4>
+              <h4 class="text-base-500 dark:text-base-400">Publisher</h4>
               {{ game.publisher }}
             </div>
 
             <div>
-              <h4 class="text-gray-400">Release Date</h4>
+              <h4 class="text-base-500 dark:text-base-400">Release Date</h4>
               {{ releaseDate }}
             </div>
 
             <div>
-              <h4 class="text-gray-400">Genre</h4>
+              <h4 class="text-base-500 dark:text-base-400">Genre</h4>
               {{ game.genre }}
             </div>
 
             <div>
-              <h4 class="text-gray-400">Platform</h4>
+              <h4 class="text-base-500 dark:text-base-400">Platform</h4>
               {{ game.platform }}
             </div>
           </div>
@@ -113,27 +118,27 @@
 
           <div class="grid grid-cols-3 mt-4 gap-4">
             <div class="mb-2">
-              <h4 class="text-gray-400">OS</h4>
+              <h4 class="text-base-500 dark:text-base-400">OS</h4>
               {{ game.minimum_system_requirements?.os }}
             </div>
 
             <div>
-              <h4 class="text-gray-400">Memory</h4>
+              <h4 class="text-base-500 dark:text-base-400">Memory</h4>
               {{ game.minimum_system_requirements?.memory }}
             </div>
 
             <div>
-              <h4 class="text-gray-400">Storage</h4>
+              <h4 class="text-base-500 dark:text-base-400">Storage</h4>
               {{ game.minimum_system_requirements?.storage }}
             </div>
 
             <div>
-              <h4 class="text-gray-400">Processor</h4>
+              <h4 class="text-base-500 dark:text-base-400">Processor</h4>
               {{ game.minimum_system_requirements?.processor }}
             </div>
 
             <div>
-              <h4 class="text-gray-400">Graphics</h4>
+              <h4 class="text-base-500 dark:text-base-400">Graphics</h4>
               {{ game.minimum_system_requirements?.graphics }}
             </div>
           </div>

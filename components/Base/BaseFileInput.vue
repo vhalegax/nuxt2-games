@@ -20,10 +20,7 @@
             @change="onChangeFile"
           />
 
-          <div
-            v-if="errors.length > 0"
-            class="mt-1 text-sm text-error-700 dark:text-error-500 h-5"
-          >
+          <div v-if="errors.length > 0" class="mt-1 text-sm text-error-500 h-5">
             <span> {{ errors[0] }} </span>
           </div>
 
@@ -106,21 +103,23 @@ export default {
       }
     },
     setInputClass(error) {
+      const defaultClass = ['dark:bg-base-700']
+
       if (error)
         return [
-          'dark:bg-base-700',
-          'dark:text-error-50',
-          'dark:placeholder-error-400',
-          'dark:border-error-600',
-          'dark:focus:border-error-600',
+          ...defaultClass,
+          'placeholder-error-500',
+          'border-error-500',
+          'focus:border-error-500',
         ]
 
       return [
-        'dark:bg-base-700',
-        'dark:text-base-50',
+        ...defaultClass,
+        'placeholder-base-400',
         'dark:placeholder-base-400',
         'dark:border-base-600',
-        'dark:focus:border-primary-500',
+        'focus:border-primary-600',
+        'dark:focus:border-primary-600',
       ]
     },
   },

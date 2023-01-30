@@ -1,10 +1,13 @@
 <template>
-  <div role="status" class="rounded-lg shadow animate-pulse">
+  <div
+    role="status"
+    class="rounded-lg shadow shadow-base-300 dark:shadow-base-700 animate-pulse p-4"
+  >
     <div
-      class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700"
+      class="flex items-center justify-center rounded h-48 mb-4 bg-base-300 dark:bg-base-700"
     >
       <svg
-        class="w-12 h-12 text-gray-200 dark:text-gray-600"
+        class="w-12 h-12 text-base-300 dark:text-base-700"
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
         fill="currentColor"
@@ -16,10 +19,10 @@
       </svg>
     </div>
     <div
-      class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"
+      class="h-2.5 bg-base-300 rounded-full dark:bg-base-700 w-48 mb-4"
     ></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+    <div class="h-2 bg-base-300 rounded-full dark:bg-base-700 mb-2.5"></div>
+    <div class="h-2 bg-base-300 rounded-full dark:bg-base-700 mb-2.5"></div>
+    <div class="h-2 bg-base-300 rounded-full dark:bg-base-700"></div>
   </div>
 </template>

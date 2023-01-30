@@ -1,6 +1,6 @@
 <template>
   <div
-    class="max-w-5xl mx-auto p-4 shadow shadow-base-600 border border-base-500 rounded-lg"
+    class="max-w-5xl mx-auto p-4 shadow border dark:border-base-500 dark:shadow-base-600 rounded-lg"
   >
     <ValidationObserver ref="form">
       <form @submit.prevent="">

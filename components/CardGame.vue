@@ -1,5 +1,7 @@
 <template>
-  <div class="font-sans p-4 w-full rounded-lg text-white shadow shadow-gray-600">
+  <div
+    class="font-sans p-4 w-full rounded-lg shadow shadow-base-300 dark:shadow-base-700"
+  >
     <div class="font-sans">
       <NuxtLink :to="linkDetails">
         <img
@@ -15,7 +17,7 @@
         <div class="mb-1">
           <NuxtLink :to="linkDetails">
             <h3
-              class="text-xl font-medium tracking-tight text-white hover:text-primary-600"
+              class="text-xl font-medium tracking-tight hover:text-primary-600 dark:hover:text-primary-600"
             >
               {{ game.title }}
             </h3>
@@ -23,14 +25,16 @@
         </div>
 
         <div
-          class="text-sm text-gray-400 tracking-tight flex justify-between mb-3"
+          class="text-sm text-base-400 dark:text-base-500 tracking-tight flex justify-between mb-3"
         >
           <span class="w-1/2 lg:w-2/3">{{ game.publisher }}</span>
           <span>{{ releaseDate }}</span>
         </div>
 
         <!-- Desc -->
-        <p class="text-sm text-left text-gray-300 tracking-tight">
+        <p
+          class="text-sm text-left text-base-700 dark:text-base-300 tracking-tight"
+        >
           {{ desc }}
         </p>
 

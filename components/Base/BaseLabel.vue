@@ -1,8 +1,10 @@
 <template>
   <div>
-    <label :for="id" class="mb-1 font-medium capitalize" :class="labelClass">
-      {{ label }}
-    </label>
+    <div class="mb-1">
+      <label :for="id" class="font-medium capitalize" :class="labelClass">
+        {{ label }}
+      </label>
+    </div>
 
     <slot></slot>
   </div>
@@ -26,7 +28,7 @@ export default {
 
   computed: {
     labelClass() {
-      if (this.error) return 'text-error-700 dark:text-error-500'
+      if (this.error) return 'text-error-500'
       return 'text-base-900 dark:text-base-50'
     },
   },
