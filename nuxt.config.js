@@ -17,7 +17,7 @@ export default {
   css: ['@/assets/css/tailwind.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['@/plugins/vee-validate.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -26,7 +26,8 @@ export default {
   buildModules: [
     '@nuxt/postcss8',
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
+    // '@nuxtjs/eslint-module',
+    'vue-sweetalert2/nuxt',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -65,6 +66,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    transpile: ['vee-validate/dist/rules'],
     postcss: {
       plugins: {
         tailwindcss: {},
