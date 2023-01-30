@@ -1,6 +1,6 @@
 <template>
   <div
-    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-4"
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"
   >
     <template v-if="$fetchState.pending">
       <CardSkeleton v-for="index in 25" :key="index" />
@@ -33,6 +33,12 @@ export default {
         this.games = res.data
       }
     } catch (e) {}
+  },
+
+  head() {
+    return {
+      title: 'Games',
+    }
   },
 }
 </script>

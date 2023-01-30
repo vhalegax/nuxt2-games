@@ -1,5 +1,5 @@
 <template>
-  <div role="status" class="p-4 rounded-lg shadow animate-pulse">
+  <div role="status" class="rounded-lg shadow animate-pulse">
     <div
       class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700"
     >
