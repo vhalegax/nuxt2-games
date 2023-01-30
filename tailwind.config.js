@@ -1,10 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 
+const colors = require('tailwindcss/colors')
+
 const myTheme = {
   fontFamily: {},
   colors: {
-    primary: {},
-    secondary: {},
+    transparent: 'transparent',
+    base: colors.gray,
+    neutral: colors.gray,
+    primary: colors.purple,
+    secondary: colors.pink,
+    accent: colors.blue,
+    success: colors.green,
+    error: colors.red,
+    info: colors.blue,
+    warning: colors.yellow,
   },
 }
 

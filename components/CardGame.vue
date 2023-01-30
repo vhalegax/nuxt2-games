@@ -1,32 +1,31 @@
 <template>
-  <div class="font-sans p-4 w-full rounded-lg text-white shadow shadow-purple-600">
+  <div class="font-sans p-4 w-full rounded-lg text-white shadow shadow-gray-600">
     <div class="font-sans">
-      <a href="#">
+      <NuxtLink :to="linkDetails">
         <img
-          class="h-full w-full rounded-lg object-cover hover:shadow-lg hover:shadow-purple-600"
+          class="h-full w-full rounded-lg object-cover hover:shadow-lg hover:shadow-primary-600 hover:scale-115 hover:rotate-3"
           :src="game.thumbnail"
           alt="image"
           loading="lazy"
         />
-      </a>
+      </NuxtLink>
 
       <div class="py-2">
         <!-- Title -->
-
         <div class="mb-1">
-          <a href="#">
+          <NuxtLink :to="linkDetails">
             <h3
-              class="text-xl font-medium tracking-tight text-white hover:text-purple-600"
+              class="text-xl font-medium tracking-tight text-white hover:text-primary-600"
             >
               {{ game.title }}
             </h3>
-          </a>
+          </NuxtLink>
         </div>
 
         <div
           class="text-sm text-gray-400 tracking-tight flex justify-between mb-3"
         >
-          <span class="w-1/2 md:w-2/3">{{ game.publisher }}</span>
+          <span class="w-1/2 lg:w-2/3">{{ game.publisher }}</span>
           <span>{{ releaseDate }}</span>
         </div>
 
@@ -39,7 +38,7 @@
           <div
             v-for="(chip, index) in chips"
             :key="index"
-            class="rounded-full px-2 py-1 text-center text-xs font-medium text-white bg-purple-700"
+            class="rounded-full px-2 py-1 text-center text-xs font-medium text-white bg-primary-600"
           >
             {{ chip }}
           </div>
@@ -75,6 +74,9 @@ export default {
       chips.push(...this.game.platform.split(','))
 
       return chips
+    },
+    linkDetails() {
+      return `/games/${this.game.id}`
     },
   },
 }
